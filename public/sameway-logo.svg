@@ -1,0 +1,25 @@
+<svg width="640" height="200" viewBox="0 0 640 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SameWay logo">
+  <title>SameWay</title>
+  <defs>
+    <linearGradient id="samewayMark" x1="60" y1="150" x2="200" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8B8FF"/>
+      <stop offset="1" stop-color="#9381FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- two routes meeting at one destination -->
+  <g stroke="url(#samewayMark)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M58 152 C 82 128, 88 106, 112 88 C 134 72, 156 72, 176 60"/>
+    <path d="M200 152 C 176 128, 170 106, 146 88 C 124 72, 102 72, 82 60"/>
+    <path d="M129 88 L 129 62"/>
+  </g>
+
+  <!-- destination pin -->
+  <path d="M129 24 C 110 24 96 38 96 57 C 96 82 129 112 129 112 C 129 112 162 82 162 57 C 162 38 148 24 129 24 Z" fill="url(#samewayMark)"/>
+  <circle cx="129" cy="57" r="12" fill="#FFD8BE"/>
+
+  <!-- wordmark -->
+  <text x="236" y="112" font-family="'Signika Negative', 'Segoe UI', Arial, sans-serif" font-size="62" font-weight="700" fill="#9381FF" letter-spacing="-1">Same</text>
+  <text x="388" y="112" font-family="'Signika Negative', 'Segoe UI', Arial, sans-serif" font-size="62" font-weight="700" fill="#B8B8FF" letter-spacing="-1">Way</text>
+  <text x="238" y="140" font-family="'Signika Negative', 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="500" fill="#7A6BD6" letter-spacing="4">WALK HOME TOGETHER</text>
+</svg>
