@@ -158,6 +158,9 @@ sameway/
 │   ├── button.tsx         # Primary button
 │   └── stepButton.tsx     # Gradient step button
 ├── styles/                # globals.css, Home.module.css, loading.css
+├── config/
+│   └── school.ts          # School domain + name (from env)
+├── .env.example           # Copy to .env.local and set your school
 ├── public/
 │   ├── sameway-logo.svg   # Wordmark logo
 │   ├── sameway-icon.svg   # App icon
@@ -188,7 +191,15 @@ npm run lint       # lint
 
 - 🔥 **Firebase** — the project uses a Firebase config in `firebase.ts` (Auth + Firestore).
 - 🗺️ **Google Maps** — a Maps JavaScript API key is loaded in `pages/_app.tsx` for Places and the map view.
-- 🎓 **School domain** — sign-up currently admits `@nyu.edu` addresses and can be changed to any school domain.
+- 🎓 **School domain** — sign-up is configurable per school: set `SCHOOL_DOMAIN` in your environment to admit your school's email addresses.
+
+```bash
+# .env.local
+SCHOOL_DOMAIN=@yourschool.edu
+SCHOOL_NAME=Your School Name
+```
+
+Copy [`.env.example`](.env.example) to `.env.local` and fill in your values. The app reads these through `config/school.ts`, so no code changes are needed to point SameWay at a different school. (Next.js exposes browser variables only when prefixed with `NEXT_PUBLIC_`, so `NEXT_PUBLIC_SCHOOL_DOMAIN` / `NEXT_PUBLIC_SCHOOL_NAME` are also supported and take precedence.)
 
 ## 🎬 Demo flow
 

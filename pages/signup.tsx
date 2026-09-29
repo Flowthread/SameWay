@@ -5,6 +5,7 @@ import { app } from './../firebase';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Router from "next/router";
 import styled from 'styled-components';
+import { SCHOOL_DOMAIN, SCHOOL_NAME, isSchoolEmail } from "../config/school";
 
 const signUp = (
     email: string,
@@ -32,8 +33,8 @@ const SignUp = () => {
     const {  register, handleSubmit } = useForm();
     const onSubmit = async (data: { [x:string]: string }) => {
         console.log(data);
-        if (!data.email.includes("@nyu.edu")){
-            alert("Only NYU students are allowed to use SameWay at this point. Stay tuned!");
+        if (!isSchoolEmail(data.email)){
+            alert(`Only ${SCHOOL_NAME} students (${SCHOOL_DOMAIN}) are allowed to use SameWay at this point. Stay tuned!`);
         }
         else if (data.password !== data.password2) {
             alert("Password don't match! Reenter password");
@@ -53,7 +54,7 @@ const SignUp = () => {
                     <input
                         type="email"
                         className="form-control"
-                        placeholder="Enter email"
+                        placeholder={`Enter your ${SCHOOL_DOMAIN} email`}
                         {...register("email")}
                         required
                         style={styleFloat} />
