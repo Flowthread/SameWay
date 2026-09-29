@@ -10,9 +10,11 @@ import {getFirestore} from "@firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyBR3Hcc32iiZ5Jk-fpLl0t7vz54lt4Ni4s",
-    authDomain: "homie-7df1b.firebaseapp.com",
-    projectId: "homie-7df1b",
-    storageBucket: "homie-7df1b.appspot.com",
+    authDomain: "flowthread-1.firebaseapp.com",
+    projectId: "flowthread-1",
+    storageBucket: "flowthread-1.appspot.com",
+    // TODO: replace messagingSenderId and appId with the values from the
+    // flowthread-1 Firebase project console (Project settings -> Your apps).
     messagingSenderId: "829211595380",
     appId: "1:829211595380:web:ca89f9723fa2cf97673721",
     measurementId: "G-6HT9EQX21Q"
